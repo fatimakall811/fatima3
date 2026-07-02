@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="admin professional admin dashboard template">
+  <title>Dashboard | admin</title>
+
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/vendors/bootstrap-icons/bootstrap-icons.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+  <div class="admin-shell">
+    <div class="sidebar-backdrop" data-sidebar-close></div>
+
+    <aside class="admin-sidebar" id="adminSidebar" aria-label="Main navigation">
+      <div class="sidebar-header">
+        <a class="brand-mark" href="index.html" aria-label="admin dashboard">
+          <span class="brand-icon"><i class="bi bi-grid-1x2-fill" aria-hidden="true"></i></span>
+          <span class="brand-copy">
+            <span class="brand-title">admin</span>
+            <span class="brand-subtitle">Admin Template</span>
+          </span>
+        </a>
+      </div>
+
+                  <nav class="sidebar-nav">
+        <a class="nav-link active" href="index.html" aria-current="page">
+          <span class="nav-icon"><i class="bi bi-speedometer2" aria-hidden="true"></i></span>
+          <span class="nav-text">Dashboard</span>
+        </a>
+        <a class="nav-link" href="products.html">
+          <span class="nav-icon"><i class="bi bi-box-seam" aria-hidden="true"></i></span>
+          <span class="nav-text">Products</span>
+        </a>
+        <a class="nav-link" href="add-product.html">
+          <span class="nav-icon"><i class="bi bi-plus-square" aria-hidden="true"></i></span>
+          <span class="nav-text">Add Product</span>
+        </a>
+        <a class="nav-link" href="users.html">
+          <span class="nav-icon"><i class="bi bi-people" aria-hidden="true"></i></span>
+          <span class="nav-text">Users</span>
+        </a>
+        <a class="nav-link" href="profile.html">
+          <span class="nav-icon"><i class="bi bi-person-badge" aria-hidden="true"></i></span>
+          <span class="nav-text">Profile</span>
+        </a>
+        <a class="nav-link" href="settings.html">
+          <span class="nav-icon"><i class="bi bi-gear" aria-hidden="true"></i></span>
+          <span class="nav-text">Settings</span>
+        </a>
+      </nav>
+
+
+
+      <div class="sidebar-user">
+        <img class="avatar-img avatar-md sidebar-user-avatar" src="../assets/images/avatar/avatar.jpg" alt="Admin">
+        <strong>Admin</strong>
+        <small>Active Workspace</small>
+      </div>
+
+      <div class="sidebar-footer">
+        <span class="status-dot"></span>
+        <span class="sidebar-footer-text">System running smoothly</span>
+      </div>
+    </aside>
+
+    <div class="admin-main">
+      <nav class="navbar admin-navbar navbar-expand bg-white">
+        <div class="container-fluid px-3 px-lg-4">
+          <button class="sidebar-toggle" type="button" data-sidebar-toggle aria-controls="adminSidebar" aria-expanded="true" aria-label="Toggle sidebar">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <form class="d-none d-md-flex ms-3 flex-grow-1" role="search">
+            <input class="form-control search-input" type="search" placeholder="Search users, orders, reports" aria-label="Search">
+          </form>
+
+          <div class="navbar-actions ms-auto">
+            <button class="icon-button theme-toggle" type="button" data-theme-toggle aria-label="Switch color theme" title="Switch color theme">
+              <i class="bi bi-moon-stars" data-theme-icon aria-hidden="true"></i>
+            </button>
+            <div class="dropdown">
+              <button class="icon-button" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Notifications">
+                <span class="notification-dot"></span>
+                <i class="bi bi-bell" aria-hidden="true"></i>
+              </button>
+              <div class="dropdown-menu dropdown-menu-end notification-menu">
+                <div class="dropdown-header fw-bold text-body">Notifications</div>
+                <a class="dropdown-item" href="users.html">
+                  <span class="notification-title">New user registered</span>
+                  <span class="notification-time">4 minutes ago</span>
+                </a>
+                <a class="dropdown-item" href="charts.html">
+                  <span class="notification-title">Revenue target reached</span>
+                  <span class="notification-time">32 minutes ago</span>
+                </a>
+                <a class="dropdown-item" href="settings.html">
+                  <span class="notification-title">Security review completed</span>
+                  <span class="notification-time">1 hour ago</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="dropdown">
+              <button class="profile-button dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <img class="avatar-img avatar-sm" src="../assets/images/avatar/avatar.jpg" alt="Admin">
+                <span class="profile-name d-none d-sm-inline">Admin</span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+                <li><a class="dropdown-item" href="settings.html">Account settings</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="login.html">Sign out</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <main class="dashboard-content">
+        <div class="container-fluid px-3 px-lg-4 py-4">
+
+          <!-- Page Heading -->
+          <div class="page-heading">
+            <div class="page-heading-copy">
+              <span class="page-icon"><i class="bi bi-shop" aria-hidden="true"></i></span>
+              <div>
+                <p class="eyebrow mb-1">Overview</p>
+                <h1 class="h3 mb-1">Store Dashboard</h1>
+                <p class="text-muted mb-0">Monitor your store's revenue, orders, products, and customers at a glance.</p>
+              </div>
+            </div>
+            <div class="heading-actions">
+              <a class="btn btn-outline-secondary btn-sm" href="products.html"><i class="bi bi-box-seam" aria-hidden="true"></i> Products</a>
+              <a class="btn btn-primary btn-sm" href="add-product.html"><i class="bi bi-plus-lg" aria-hidden="true"></i> Add Product</a>
+            </div>
+          </div>
+
+          <!-- Metrics -->
+          <section class="row g-3 mt-1" aria-label="Store metrics">
+            <div class="col-12 col-sm-6 col-xl-3">
+              <article class="metric-card metric-primary">
+                <div class="metric-top">
+                  <span class="metric-label">Total Revenue</span>
+                  <span class="metric-icon"><i class="bi bi-cash-stack" aria-hidden="true"></i></span>
+                </div>
+                <div class="metric-value">$48,240</div>
+                <div class="metric-meta">
+                  <span class="text-success">+12.5%</span>
+                  <span>vs last month</span>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-12 col-sm-6 col-xl-3">
+              <article class="metric-card metric-success">
+                <div class="metric-top">
+                  <span class="metric-label">Total Orders</span>
+                  <span class="metric-icon"><i class="bi bi-bag-check" aria-hidden="true"></i></span>
+                </div>
+                <div class="metric-value">1,284</div>
+                <div class="metric-meta">
+                  <span class="text-success">+8.2%</span>
+                  <span>this month</span>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-12 col-sm-6 col-xl-3">
+              <article class="metric-card metric-warning">
+                <div class="metric-top">
+                  <span class="metric-label">Total Products</span>
+                  <span class="metric-icon"><i class="bi bi-box-seam" aria-hidden="true"></i></span>
+                </div>
+                <div class="metric-value">248</div>
+                <div class="metric-meta">
+                  <span class="text-warning">13</span>
+                  <span>out of stock</span>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-12 col-sm-6 col-xl-3">
+              <article class="metric-card metric-danger">
+                <div class="metric-top">
+                  <span class="metric-label">Customers</span>
+                  <span class="metric-icon"><i class="bi bi-people" aria-hidden="true"></i></span>
+                </div>
+                <div class="metric-value">8,742</div>
+                <div class="metric-meta">
+                  <span class="text-success">+5.1%</span>
+                  <span>new sign-ups</span>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <!-- Chart + Recent Orders Activity -->
+          <section class="row g-3 mt-1">
+            <div class="col-12 col-xl-8">
+              <div class="panel">
+                <div class="panel-header">
+                  <div>
+                    <h2 class="h5 mb-1 section-title"><i class="bi bi-graph-up-arrow" aria-hidden="true"></i><span>Monthly Revenue</span></h2>
+                    <p class="text-muted mb-0">Revenue performance across the last 6 months.</p>
+                  </div>
+                </div>
+                <div class="chart-bars" aria-label="Monthly revenue chart">
+                  <div class="chart-column bar-42"><span></span><small>Jan</small></div>
+                  <div class="chart-column bar-58"><span></span><small>Feb</small></div>
+                  <div class="chart-column bar-51"><span></span><small>Mar</small></div>
+                  <div class="chart-column bar-72"><span></span><small>Apr</small></div>
+                  <div class="chart-column bar-66"><span></span><small>May</small></div>
+                  <div class="chart-column bar-83"><span></span><small>Jun</small></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-xl-4">
+              <div class="panel h-100">
+                <div class="panel-header">
+                  <div>
+                    <h2 class="h5 mb-1 section-title"><i class="bi bi-activity" aria-hidden="true"></i><span>Store Activity</span></h2>
+                    <p class="text-muted mb-0">Latest store events.</p>
+                  </div>
+                </div>
+                <div class="activity-list">
+                  <div class="activity-item">
+                    <span class="activity-dot bg-success"></span>
+                    <div><p class="mb-1 fw-semibold">New order placed</p><p class="text-muted small mb-0">Order #1042 — $129.00 — 5 mins ago</p></div>
+                  </div>
+                  <div class="activity-item">
+                    <span class="activity-dot bg-warning"></span>
+                    <div><p class="mb-1 fw-semibold">Low stock alert</p><p class="text-muted small mb-0">Leather Wallet — only 2 units left</p></div>
+                  </div>
+                  <div class="activity-item">
+                    <span class="activity-dot bg-primary"></span>
+                    <div><p class="mb-1 fw-semibold">New product added</p><p class="text-muted small mb-0">Smartwatch Pro — added to Electronics</p></div>
+                  </div>
+                  <div class="activity-item">
+                    <span class="activity-dot bg-danger"></span>
+                    <div><p class="mb-1 fw-semibold">Order cancelled</p><p class="text-muted small mb-0">Order #1038 — refund initiated</p></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Recent Orders -->
+          <section class="panel mt-3">
+            <div class="panel-header">
+              <div>
+                <h2 class="h5 mb-1 section-title"><i class="bi bi-bag-check" aria-hidden="true"></i><span>Recent Orders</span></h2>
+                <p class="text-muted mb-0">Latest customer orders across your store.</p>
+              </div>
+              <a class="btn btn-outline-secondary btn-sm" href="users.html">View Customers</a>
+            </div>
+            <div class="table-responsive">
+              <table class="table align-middle mb-0">
+                <thead>
+                  <tr>
+                    <th scope="col">Order</th>
+                    <th scope="col">Customer</th>
+                    <th scope="col">Product</th>
+                    <th scope="col">Total</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Date</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="fw-semibold">#1042</span></td>
+                    <td>
+                      <div class="d-flex align-items-center gap-2">
+                        <img class="avatar-img avatar-sm" src="../assets/images/avatar/avatar-1.jpg" alt="Sarah Ahmed">
+                        <div>
+                          <p class="fw-semibold mb-0">Sarah Ahmed</p>
+                          <p class="text-muted small mb-0">sarah@example.com</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Wireless Headphones</td>
+                    <td class="fw-semibold">$89.99</td>
+                    <td><span class="badge text-bg-success">Delivered</span></td>
+                    <td>Jun 28, 2026</td>
+                  </tr>
+                  <tr>
+                    <td><span class="fw-semibold">#1041</span></td>
+                    <td>
+                      <div class="d-flex align-items-center gap-2">
+                        <img class="avatar-img avatar-sm" src="../assets/images/avatar/avatar-2.jpg" alt="Rafi Khan">
+                        <div>
+                          <p class="fw-semibold mb-0">Rafi Khan</p>
+                          <p class="text-muted small mb-0">rafi@example.com</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Smartwatch Pro</td>
+                    <td class="fw-semibold">$199.99</td>
+                    <td><span class="badge text-bg-warning">Pending</span></td>
+                    <td>Jun 27, 2026</td>
+                  </tr>
+                  <tr>
+                    <td><span class="fw-semibold">#1040</span></td>
+                    <td>
+                      <div class="d-flex align-items-center gap-2">
+                        <img class="avatar-img avatar-sm" src="../assets/images/avatar/avatar-3.jpg" alt="Nadia Islam">
+                        <div>
+                          <p class="fw-semibold mb-0">Nadia Islam</p>
+                          <p class="text-muted small mb-0">nadia@example.com</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Running Shoes</td>
+                    <td class="fw-semibold">$124.50</td>
+                    <td><span class="badge text-bg-primary">Shipped</span></td>
+                    <td>Jun 26, 2026</td>
+                  </tr>
+                  <tr>
+                    <td><span class="fw-semibold">#1039</span></td>
+                    <td>
+                      <div class="d-flex align-items-center gap-2">
+                        <img class="avatar-img avatar-sm" src="../assets/images/avatar/avatar-4.jpg" alt="Mina Torres">
+                        <div>
+                          <p class="fw-semibold mb-0">Mina Torres</p>
+                          <p class="text-muted small mb-0">mina@example.com</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Yoga Mat</td>
+                    <td class="fw-semibold">$35.00</td>
+                    <td><span class="badge text-bg-success">Delivered</span></td>
+                    <td>Jun 25, 2026</td>
+                  </tr>
+                  <tr>
+                    <td><span class="fw-semibold">#1038</span></td>
+                    <td>
+                      <div class="d-flex align-items-center gap-2">
+                        <img class="avatar-img avatar-sm" src="../assets/images/avatar/avatar-5.jpg" alt="Jon Oliver">
+                        <div>
+                          <p class="fw-semibold mb-0">Jon Oliver</p>
+                          <p class="text-muted small mb-0">jon@example.com</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Coffee Maker</td>
+                    <td class="fw-semibold">$79.95</td>
+                    <td><span class="badge text-bg-secondary">Cancelled</span></td>
+                    <td>Jun 24, 2026</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <!-- Top Products -->
+          <section class="panel mt-3">
+            <div class="panel-header">
+              <div>
+                <h2 class="h5 mb-1 section-title"><i class="bi bi-star" aria-hidden="true"></i><span>Top Selling Products</span></h2>
+                <p class="text-muted mb-0">Best performing products this month.</p>
+              </div>
+              <a class="btn btn-outline-secondary btn-sm" href="products.html">All Products</a>
+            </div>
+            <div class="table-responsive">
+              <table class="table align-middle mb-0">
+                <thead>
+                  <tr>
+                    <th scope="col">Product</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Units Sold</th>
+                    <th scope="col">Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="d-flex align-items-center gap-2">
+                        <img src="https://placehold.co/40x40/e9f0fb/4361ee?text=WH" alt="Wireless Headphones" width="40" height="40" class="rounded">
+                        <p class="fw-semibold mb-0">Wireless Headphones</p>
+                      </div>
+                    </td>
+                    <td>Electronics</td>
+                    <td>$89.99</td>
+                    <td>342</td>
+                    <td><span class="badge text-bg-success">In Stock</span></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="d-flex align-items-center gap-2">
+                        <img src="https://placehold.co/40x40/e6f9f1/2dc653?text=RS" alt="Running Shoes" width="40" height="40" class="rounded">
+                        <p class="fw-semibold mb-0">Running Shoes</p>
+                      </div>
+                    </td>
+                    <td>Footwear</td>
+                    <td>$124.50</td>
+                    <td>278</td>
+                    <td><span class="badge text-bg-success">In Stock</span></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="d-flex align-items-center gap-2">
+                        <img src="https://placehold.co/40x40/e9f0fb/4361ee?text=SW" alt="Smartwatch Pro" width="40" height="40" class="rounded">
+                        <p class="fw-semibold mb-0">Smartwatch Pro</p>
+                      </div>
+                    </td>
+                    <td>Electronics</td>
+                    <td>$199.99</td>
+                    <td>195</td>
+                    <td><span class="badge text-bg-success">In Stock</span></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="d-flex align-items-center gap-2">
+                        <img src="https://placehold.co/40x40/fff3cd/e6a817?text=LW" alt="Leather Wallet" width="40" height="40" class="rounded">
+                        <p class="fw-semibold mb-0">Leather Wallet</p>
+                      </div>
+                    </td>
+                    <td>Accessories</td>
+                    <td>$45.00</td>
+                    <td>160</td>
+                    <td><span class="badge text-bg-secondary">Out of Stock</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+        </div>
+      </main>
+
+    </div>
+  </div>
+
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="admin professional admin dashboard template">
+  <title>Add Product | admin</title>
+
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/vendors/bootstrap-icons/bootstrap-icons.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+  <div class="admin-shell">
+    <div class="sidebar-backdrop" data-sidebar-close></div>
+
+    <aside class="admin-sidebar" id="adminSidebar" aria-label="Main navigation">
+      <div class="sidebar-header">
+        <a class="brand-mark" href="index.html" aria-label="admin dashboard">
+          <span class="brand-icon"><i class="bi bi-grid-1x2-fill" aria-hidden="true"></i></span>
+          <span class="brand-copy">
+            <span class="brand-title">admin</span>
+            <span class="brand-subtitle">Admin Template</span>
+          </span>
+        </a>
+      </div>
+
+            <nav class="sidebar-nav">
+        <a class="nav-link" href="index.html">
+          <span class="nav-icon"><i class="bi bi-speedometer2" aria-hidden="true"></i></span>
+          <span class="nav-text">Dashboard</span>
+        </a>
+        <a class="nav-link" href="products.html">
+          <span class="nav-icon"><i class="bi bi-box-seam" aria-hidden="true"></i></span>
+          <span class="nav-text">Products</span>
+        </a>
+        <a class="nav-link active" href="add-product.html" aria-current="page">
+          <span class="nav-icon"><i class="bi bi-plus-square" aria-hidden="true"></i></span>
+          <span class="nav-text">Add Product</span>
+        </a>
+        <a class="nav-link" href="users.html">
+          <span class="nav-icon"><i class="bi bi-people" aria-hidden="true"></i></span>
+          <span class="nav-text">Users</span>
+        </a>
+        <a class="nav-link" href="profile.html">
+          <span class="nav-icon"><i class="bi bi-person-badge" aria-hidden="true"></i></span>
+          <span class="nav-text">Profile</span>
+        </a>
+        <a class="nav-link" href="settings.html">
+          <span class="nav-icon"><i class="bi bi-gear" aria-hidden="true"></i></span>
+          <span class="nav-text">Settings</span>
+        </a>
+      </nav>
+
+
+      <div class="sidebar-user">
+        <img class="avatar-img avatar-md sidebar-user-avatar" src="../assets/images/avatar/avatar.jpg" alt="Admin">
+        <strong>Admin</strong>
+        <small>Active Workspace</small>
+      </div>
+
+      <div class="sidebar-footer">
+        <span class="status-dot"></span>
+        <span class="sidebar-footer-text">System running smoothly</span>
+      </div>
+    </aside>
+
+    <div class="admin-main">
+      <nav class="navbar admin-navbar navbar-expand bg-white">
+        <div class="container-fluid px-3 px-lg-4">
+          <button class="sidebar-toggle" type="button" data-sidebar-toggle aria-controls="adminSidebar" aria-expanded="true" aria-label="Toggle sidebar">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <form class="d-none d-md-flex ms-3 flex-grow-1" role="search">
+            <input class="form-control search-input" type="search" placeholder="Search products, categories" aria-label="Search">
+          </form>
+
+          <div class="navbar-actions ms-auto">
+            <button class="icon-button theme-toggle" type="button" data-theme-toggle aria-label="Switch color theme" title="Switch color theme">
+              <i class="bi bi-moon-stars" data-theme-icon aria-hidden="true"></i>
+            </button>
+            <div class="dropdown">
+              <button class="icon-button" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Notifications">
+                <span class="notification-dot"></span>
+                <i class="bi bi-bell" aria-hidden="true"></i>
+              </button>
+              <div class="dropdown-menu dropdown-menu-end notification-menu">
+                <div class="dropdown-header fw-bold text-body">Notifications</div>
+                <a class="dropdown-item" href="users.html">
+                  <span class="notification-title">New user registered</span>
+                  <span class="notification-time">4 minutes ago</span>
+                </a>
+                <a class="dropdown-item" href="#">
+                  <span class="notification-title">Low stock alert</span>
+                  <span class="notification-time">20 minutes ago</span>
+                </a>
+                <a class="dropdown-item" href="settings.html">
+                  <span class="notification-title">Security review completed</span>
+                  <span class="notification-time">1 hour ago</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="dropdown">
+              <button class="profile-button dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <img class="avatar-img avatar-sm" src="../assets/images/avatar/avatar.jpg" alt="Admin">
+                <span class="profile-name d-none d-sm-inline">Admin</span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+                <li><a class="dropdown-item" href="settings.html">Account settings</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="login.html">Sign out</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <main class="dashboard-content">
+        <div class="container-fluid px-3 px-lg-4 py-4">
+
+          <!-- Page Heading -->
+          <div class="page-heading">
+            <div class="page-heading-copy">
+              <span class="page-icon"><i class="bi bi-plus-square" aria-hidden="true" id="pageIcon"></i></span>
+              <div>
+                <p class="eyebrow mb-1">Store</p>
+                <h1 class="h3 mb-1" id="pageTitle">Add Product</h1>
+                <p class="text-muted mb-0" id="pageSubtitle">Fill in the details below to add a new product to your catalog.</p>
+              </div>
+            </div>
+            <div class="heading-actions">
+              <a class="btn btn-outline-secondary btn-sm" href="products.html">
+                <i class="bi bi-arrow-left" aria-hidden="true"></i> Back to Products
+              </a>
+            </div>
+          </div>
+
+          <!-- Alert area -->
+          <div id="alertArea" class="mt-3"></div>
+
+          <!-- Form -->
+          <section class="row g-3 mt-1">
+            <div class="col-12 col-xl-8">
+              <form class="panel" id="productForm" novalidate>
+                <div class="panel-header">
+                  <div>
+                    <h2 class="h5 mb-1 section-title">
+                      <i class="bi bi-pencil-square" aria-hidden="true"></i>
+                      <span>Product Details</span>
+                    </h2>
+                    <p class="text-muted mb-0">All fields marked with * are required.</p>
+                  </div>
+                </div>
+
+                <div class="row g-3">
+                  <!-- Product Name -->
+                  <div class="col-12">
+                    <label class="form-label" for="productName">Product Name *</label>
+                    <input class="form-control" id="productName" type="text" placeholder="e.g. Wireless Headphones" required>
+                    <div class="invalid-feedback">Product name is required.</div>
+                  </div>
+
+                  <!-- Price & Category -->
+                  <div class="col-md-6">
+                    <label class="form-label" for="productPrice">Price ($) *</label>
+                    <input class="form-control" id="productPrice" type="number" min="0" step="0.01" placeholder="0.00" required>
+                    <div class="invalid-feedback">Please enter a valid price (numbers only).</div>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="productCategory">Category *</label>
+                    <select class="form-select" id="productCategory" required>
+                      <option value="" disabled selected>Select a category</option>
+                      <option>Electronics</option>
+                      <option>Footwear</option>
+                      <option>Accessories</option>
+                      <option>Sports</option>
+                      <option>Home</option>
+                      <option>Clothing</option>
+                      <option>Other</option>
+                    </select>
+                    <div class="invalid-feedback">Please select a category.</div>
+                  </div>
+
+                  <!-- Description -->
+                  <div class="col-12">
+                    <label class="form-label" for="productDescription">Description</label>
+                    <textarea class="form-control" id="productDescription" rows="4" placeholder="Write a short product description…"></textarea>
+                  </div>
+
+                  <!-- Status -->
+                  <div class="col-12">
+                    <label class="form-label" for="productStatus">Availability</label>
+                    <select class="form-select" id="productStatus">
+                      <option value="in-stock">In Stock</option>
+                      <option value="out-of-stock">Out of Stock</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="d-flex justify-content-end gap-2 mt-4">
+                  <a class="btn btn-outline-secondary" href="products.html">Cancel</a>
+                  <button class="btn btn-primary" type="submit" id="submitBtn">
+                    <i class="bi bi-check2-circle" aria-hidden="true"></i>
+                    <span id="submitLabel">Add Product</span>
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            <!-- Image upload panel -->
+            <div class="col-12 col-xl-4">
+              <div class="panel h-100">
+                <div class="panel-header">
+                  <div>
+                    <h2 class="h5 mb-1 section-title">
+                      <i class="bi bi-image" aria-hidden="true"></i>
+                      <span>Product Image</span>
+                    </h2>
+                    <p class="text-muted mb-0">Upload a product photo.</p>
+                  </div>
+                </div>
+
+                <div id="imageDropzone"
+                     style="border: 2px dashed var(--bs-border-color, #dee2e6); border-radius: 8px; padding: 2rem; text-align: center; cursor: pointer; transition: background .2s;">
+                  <img id="imagePreview" src="" alt="" class="d-none mb-3 rounded" style="max-width:100%; max-height:160px; object-fit:contain;">
+                  <div id="dropPlaceholder">
+                    <i class="bi bi-cloud-arrow-up fs-2 text-muted"></i>
+                    <p class="text-muted small mt-2 mb-1">Drag & drop an image here, or</p>
+                    <label class="btn btn-outline-secondary btn-sm" for="imageFile">Browse</label>
+                  </div>
+                  <input type="file" id="imageFile" accept="image/*" class="d-none">
+                  <button type="button" id="removeImage" class="btn btn-sm btn-link text-danger d-none mt-1 p-0">Remove image</button>
+                </div>
+              </div>
+            </div>
+          </section>
+
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script>
+    const PRODUCTS_KEY = 'admin_products';
+
+    function loadProducts() {
+      return JSON.parse(localStorage.getItem(PRODUCTS_KEY) || '[]');
+    }
+    function saveProducts(p) {
+      localStorage.setItem(PRODUCTS_KEY, JSON.stringify(p));
+    }
+
+    // ── Edit mode detection ────────────────────────────────────
+    const params  = new URLSearchParams(location.search);
+    const editId  = params.get('edit') ? parseInt(params.get('edit')) : null;
+    let editProduct = null;
+
+    if (editId !== null) {
+      editProduct = loadProducts().find(p => p.id === editId) || null;
+    }
+
+    if (editProduct) {
+      document.title = 'Edit Product | admin';
+      document.getElementById('pageTitle').textContent    = 'Edit Product';
+      document.getElementById('pageIcon').className       = 'bi bi-pencil';
+      document.getElementById('pageSubtitle').textContent = 'Update the product details below.';
+      document.getElementById('submitLabel').textContent  = 'Save Changes';
+
+      document.getElementById('productName').value        = editProduct.name;
+      document.getElementById('productPrice').value       = editProduct.price;
+      document.getElementById('productCategory').value    = editProduct.category;
+      document.getElementById('productDescription').value = editProduct.description || '';
+      document.getElementById('productStatus').value      = editProduct.status;
+
+      if (editProduct.image) {
+        const prev = document.getElementById('imagePreview');
+        prev.src = editProduct.image;
+        prev.classList.remove('d-none');
+        document.getElementById('dropPlaceholder').classList.add('d-none');
+        document.getElementById('removeImage').classList.remove('d-none');
+      }
+    }
+
+    // ── Image upload / drag & drop ─────────────────────────────
+    let imageDataUrl = editProduct ? editProduct.image : '';
+
+    const dropzone    = document.getElementById('imageDropzone');
+    const fileInput   = document.getElementById('imageFile');
+    const preview     = document.getElementById('imagePreview');
+    const placeholder = document.getElementById('dropPlaceholder');
+    const removeBtn   = document.getElementById('removeImage');
+
+    function showPreview(src) {
+      imageDataUrl = src;
+      preview.src  = src;
+      preview.classList.remove('d-none');
+      placeholder.classList.add('d-none');
+      removeBtn.classList.remove('d-none');
+      dropzone.style.background = '';
+    }
+
+    function clearPreview() {
+      imageDataUrl = '';
+      preview.src  = '';
+      preview.classList.add('d-none');
+      placeholder.classList.remove('d-none');
+      removeBtn.classList.add('d-none');
+      fileInput.value = '';
+    }
+
+    fileInput.addEventListener('change', () => {
+      const file = fileInput.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = e => showPreview(e.target.result);
+      reader.readAsDataURL(file);
+    });
+
+    dropzone.addEventListener('dragover', e => { e.preventDefault(); dropzone.style.background = 'rgba(67,97,238,.06)'; });
+    dropzone.addEventListener('dragleave', () => { dropzone.style.background = ''; });
+    dropzone.addEventListener('drop', e => {
+      e.preventDefault();
+      dropzone.style.background = '';
+      const file = e.dataTransfer.files[0];
+      if (!file || !file.type.startsWith('image/')) return;
+      const reader = new FileReader();
+      reader.onload = ev => showPreview(ev.target.result);
+      reader.readAsDataURL(file);
+    });
+
+    removeBtn.addEventListener('click', clearPreview);
+
+    // ── Form submit ────────────────────────────────────────────
+    document.getElementById('productForm').addEventListener('submit', e => {
+      e.preventDefault();
+      const form = e.target;
+      form.classList.add('was-validated');
+
+      const name     = document.getElementById('productName').value.trim();
+      const priceRaw = document.getElementById('productPrice').value;
+      const category = document.getElementById('productCategory').value;
+      const price    = parseFloat(priceRaw);
+
+      // custom validation
+      let valid = true;
+      if (!name) { document.getElementById('productName').classList.add('is-invalid'); valid = false; }
+      else        { document.getElementById('productName').classList.remove('is-invalid'); }
+
+      if (!priceRaw || isNaN(price) || price < 0) {
+        document.getElementById('productPrice').classList.add('is-invalid'); valid = false;
+      } else {
+        document.getElementById('productPrice').classList.remove('is-invalid');
+      }
+
+      if (!category) { document.getElementById('productCategory').classList.add('is-invalid'); valid = false; }
+      else            { document.getElementById('productCategory').classList.remove('is-invalid'); }
+
+      if (!valid) return;
+
+      const products = loadProducts();
+      const today = new Date().toLocaleDateString('en-US', { month:'short', day:'2-digit', year:'numeric' });
+
+      const fallbackImage = `https://placehold.co/48x48/e9f0fb/4361ee?text=${encodeURIComponent(name.slice(0,2).toUpperCase())}`;
+
+      if (editProduct) {
+        const idx = products.findIndex(p => p.id === editId);
+        if (idx > -1) {
+          products[idx] = {
+            ...products[idx],
+            name,
+            price,
+            category,
+            description: document.getElementById('productDescription').value.trim(),
+            status: document.getElementById('productStatus').value,
+            image: imageDataUrl || products[idx].image || fallbackImage,
+          };
+        }
+      } else {
+        const maxId = products.reduce((m, p) => Math.max(m, p.id), 0);
+        products.push({
+          id: maxId + 1,
+          name,
+          price,
+          category,
+          description: document.getElementById('productDescription').value.trim(),
+          status: document.getElementById('productStatus').value,
+          image: imageDataUrl || fallbackImage,
+          added: today,
+        });
+      }
+
+      saveProducts(products);
+      showAlert('success', editProduct
+        ? `"${name}" has been updated successfully.`
+        : `"${name}" has been added to your catalog.`
+      );
+
+      if (!editProduct) {
+        form.reset();
+        form.classList.remove('was-validated');
+        clearPreview();
+      }
+    });
+
+    function showAlert(type, message) {
+      const area = document.getElementById('alertArea');
+      area.innerHTML = `
+        <div class="alert alert-${type} alert-dismissible fade show" role="alert">
+          <i class="bi bi-${type === 'success' ? 'check-circle' : 'exclamation-triangle'} me-2" aria-hidden="true"></i>
+          ${message}
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>`;
+      area.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+  </script>
+</body>
+</html>
